@@ -1,12 +1,8 @@
-function drop(arr, n = 1) {
-  const result = [];
-  if (n < 0) n = 0;
-  return arr.slice(n);
+const { mySlice } = require('./servicemethods');
 
-  for (let i = n; i < arr.length; i++) {
-    result.push(arr[i]);
-  }
-  return result;
+function drop(arr, n = 1) {
+  if (n < 0) n = 0;
+  return mySlice(arr, n);
 }
 
 module.exports = { drop };

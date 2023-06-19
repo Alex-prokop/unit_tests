@@ -34,6 +34,6 @@ describe('Chunk Function', () => {
   it('should throw an error if the chunk size is negative', () => {
     expect(() => {
       chunk([1, 2, 3, 4, 5], -1);
-    }).toThrow();
+    }).toThrow('Size cannot be negative');
   });
 });

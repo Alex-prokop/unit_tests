@@ -8,8 +8,8 @@ const users = [
 
 describe('MyFind Function', () => {
   it('should find first object that satisfies the predicate function', () => {
-    const result = MyFind(users, function (o) {
-      return o.age < 40;
+    const result = MyFind(users, function (user) {
+      return user.age < 40;
     });
     expect(result).toEqual({ user: 'barney', age: 36, active: true });
   });

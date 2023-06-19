@@ -17,4 +17,10 @@ describe('Pick Function', () => {
     const result = pick(object, ['a', 'd']);
     expect(result).toEqual({ a: 1 });
   });
+
+  it('should handle pick() called with no arguments', () => {
+    expect(() => {
+      pick();
+    }).not.toThrow('No arguments provided');
+  });
 });

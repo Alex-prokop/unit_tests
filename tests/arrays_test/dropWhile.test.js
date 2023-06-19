@@ -8,8 +8,8 @@ const users = [
 
 describe('DropWhile Function', () => {
   it('should drop elements until the predicate function returns false', () => {
-    const result = dropWhile(users, function (o) {
-      return !o.active;
+    const result = dropWhile(users, function (user) {
+      return !user.active;
     });
     expect(result).toEqual([{ user: 'pebbles', active: true }]);
   });

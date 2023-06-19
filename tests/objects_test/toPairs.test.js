@@ -54,4 +54,9 @@ describe('PickBy Function', () => {
       c: { nested: 'value' },
     });
   });
+  it('should handle pick() called with no arguments', () => {
+    expect(() => {
+      toPairs();
+    }).not.toThrow('No arguments provided');
+  });
 });

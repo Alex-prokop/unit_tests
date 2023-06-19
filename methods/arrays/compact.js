@@ -4,8 +4,7 @@ function compact(array) {
 
   for (let i = 0; i < array.length; i++) {
     if (array[i]) {
-      result[counter] = array[i];
-      counter++;
+      result[counter++] = array[i];
     }
   }
 

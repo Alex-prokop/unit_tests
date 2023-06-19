@@ -17,4 +17,9 @@ describe('Omit Function', () => {
     const result = omit(object, ['a', 'b', 'c']);
     expect(result).toEqual({});
   });
+  it('should handle pick() called with no arguments', () => {
+    expect(() => {
+      omit();
+    }).not.toThrow('No arguments provided');
+  });
 });

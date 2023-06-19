@@ -1,7 +1,7 @@
 function dropWhile(arr, predicate) {
-  var dropIndex = arr.length;
-  for (var i = 0; i < arr.length; i++) {
-    var condition;
+  let dropIndex = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    let condition;
     switch (typeof predicate) {
       case 'function':
         condition = predicate(arr[i], i, arr);

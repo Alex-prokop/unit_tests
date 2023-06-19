@@ -10,4 +10,4 @@ function toPairs(obj) {
   return result;
 }
 
-module.exports = { pickBy };
+module.exports = { toPairs };

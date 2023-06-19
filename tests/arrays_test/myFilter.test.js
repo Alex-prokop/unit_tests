@@ -7,8 +7,8 @@ const users = [
 
 describe('myFilter Function', () => {
   it('should filter objects based on the predicate function', () => {
-    const result = myFilter(users, function (o) {
-      return !o.active;
+    const result = myFilter(users, function (user) {
+      return !user.active;
     });
     expect(result).toEqual([{ user: 'fred', age: 40, active: false }]);
   });

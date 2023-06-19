@@ -1,11 +1,17 @@
 function zip(...arrays) {
-  const maxLength = Math.max(...arrays.map((arr) => arr.length));
-  let zipped = [];
+  let maxLength = 0;
+  for (let i = 0; i < arrays.length; i++) {
+    if (arrays[i].length > maxLength) {
+      maxLength = arrays[i].length;
+    }
+  }
+
+  let zipped = new Array(maxLength);
 
   for (let i = 0; i < maxLength; i++) {
-    zipped[i] = [];
+    zipped[i] = new Array(arrays.length);
     for (let j = 0; j < arrays.length; j++) {
-      zipped[i].push(arrays[j][i]);
+      zipped[i][j] = arrays[j][i];
     }
   }
 

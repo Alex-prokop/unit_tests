@@ -17,4 +17,9 @@ describe('PickBy Function', () => {
     const result = pickBy(object, () => true);
     expect(result).toEqual(object);
   });
+  it('should handle pick() called with no arguments', () => {
+    expect(() => {
+      pickBy();
+    }).not.toThrow('No arguments provided');
+  });
 });

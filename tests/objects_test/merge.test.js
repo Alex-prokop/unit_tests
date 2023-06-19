@@ -37,4 +37,9 @@ describe('Merge Function', () => {
     const result = merge(object, other);
     expect(result).toEqual({ a: { b: 2, c: 1 }, d: { e: 2 } });
   });
+  it('should handle pick() called with no arguments', () => {
+    expect(() => {
+      marge();
+    }).not.toThrow('No arguments provided');
+  });
 });
